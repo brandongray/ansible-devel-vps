@@ -1,0 +1,5 @@
+- name: perform core tasks
+  hosts: localhost
+  tags: core
+  roles:
+    - core
