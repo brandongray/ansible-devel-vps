@@ -1,11 +1,11 @@
-- name: perform core tasks
-  hosts: localhost
-  tags: core
-  roles:
-    - core
-
 - name: configure dns
   hosts: localhost
   tags: dns
   roles:
     - dns
+
+- name: perform core tasks
+  hosts: localhost
+  tags: core
+  roles:
+    - core

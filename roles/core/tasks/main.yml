@@ -1,7 +1,9 @@
 - name: install core packages
   yum:
     name: "{{ item }}"
-    state: present
+    state: latest
   with_items:
     - vim-enhanced
     - git
+    - epel-release
+    - ansible
