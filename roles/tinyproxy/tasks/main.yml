@@ -1,0 +1,18 @@
+- name: install tinyproxy
+  yum:
+    name: tinyproxy
+    state: latest
+
+- name: configure tinyproxy
+  copy:
+    src: tinyproxy.conf
+    dest: /etc/tinyproxy/tinyproxy.conf
+    owner: root
+    mode: 0644
+  notify: restart tinyproxy
+
+- name: make sure tinyproxy is running
+  service:
+    name: tinyproxy
+    state: started
+    enabled: yes

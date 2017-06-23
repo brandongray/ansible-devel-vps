@@ -9,3 +9,9 @@
   tags: core
   roles:
     - core
+
+- name: install/configure tinyproxy
+  hosts: localhost
+  tags: tinyproxy
+  roles:
+    - tinyproxy
