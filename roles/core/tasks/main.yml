@@ -8,9 +8,16 @@
     - git
     - ansible
     - cronie
+    - rsyslog
 
 - name: start/enable crond
   service:
     name: crond
+    state: started
+    enabled: yes
+
+- name: start/enable rsyslog
+  service:
+    name: rsyslog
     state: started
     enabled: yes
