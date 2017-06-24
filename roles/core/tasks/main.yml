@@ -3,7 +3,14 @@
     name: "{{ item }}"
     state: latest
   with_items:
+    - epel-release
     - vim-enhanced
     - git
-    - epel-release
     - ansible
+    - cronie
+
+- name: start/enable crond
+  service:
+    name: crond
+    state: started
+    enabled: yes
