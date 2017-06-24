@@ -15,3 +15,9 @@
   tags: tinyproxy
   roles:
     - tinyproxy
+
+- name: install/configure yum-cron
+  hosts: localhost
+  tags: yum-cron
+  roles:
+    - yum-cron
